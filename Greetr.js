@@ -68,6 +68,25 @@
       this.language = lang
       this.validate()
       return this
+    },
+
+    HTMLGreeting: function(selector, formal) {
+      if(!$) {
+        throw 'jQuery not load'
+      }
+
+      if(!selector) {
+        throw 'Missing jQuery selector'
+      }
+
+      let msg
+      if(formal) {
+        mag = this.formalGreetings()
+      } else {
+        mag = this.greeting()
+      }
+      $(selector).html(msg)
+      return this
     }
   }
 
