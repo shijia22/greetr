@@ -1,2 +1,3 @@
 let q = G$('Amy', 'BBB')
-console.log(q)
+q.greet()
+q.greet().greet(true)
