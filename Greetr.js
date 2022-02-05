@@ -29,9 +29,9 @@
     },
 
     validate: function () {
-      if (supportLangs.indexOf(this.language === -1)) {
-        throw 'Invaild Langs'
-      }
+       if (supportLangs.indexOf(this.language) === -1) {
+         throw 'Invalid language'
+       }
     },
 
     greeting: function () {
